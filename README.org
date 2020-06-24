@@ -29,3 +29,10 @@ These can be set on a per-project basis by using ~.dir-locals.el~ or ~.dir-local
     (magit-buildkite-pipeline . "your-pipeline")
     (mode . magit-buildkite)))
 #+end_src
+* TODO Improvements
+  - [ ] provide function to toggle auto status buffer refresh
+  - [ ] add hook/function to unblock job [https://buildkite.com/docs/apis/rest-api/jobs#unblock-a-job](unblock link)
+  - [ ] add hook/function to retry failed job [https://buildkite.com/docs/apis/rest-api/jobs#retry-a-job](retry link)
+  - [ ] add hook/function to retry success job with manual retry available
+  - [ ] save & persist map of encountered buildnumber+jobname+state -> write to dir-locals for project
+  - [ ] toast notification on any new blocks (lookup map when block found: if empty, send notification)
